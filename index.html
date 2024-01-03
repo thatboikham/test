@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+    }
+    button {
+      color: white;
+      background-color: #3399ff;
+      border: none;
+      font-size: 1em;
+      padding: 0.9em;
+      align-self: center;
+      width: 150px;
+      font-size: 15px;
+    }
+    .message {
+      display: flex;
+      flex-direction: column;
+    }
+    .cap {
+      display: none;
+    }
+    span {
+      font-size: 80px;
+    }
+  </style>
+  <body>
+    <div class="message">
+      <p>Hey Chirchir, click the button below to watch your video.</p>
+      <p>Can't lie, your catwalking needs some improvement</p>
+      <button>Click</button>
+    </div>
+    <div class="cap">
+      <span>404</span>
+      <h2>Not Found</h2>
+      <p>You actually thought I had it😂</p>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector("button");
+    const divmessage = document.querySelector(".message");
+    const divcap = document.querySelector(".cap");
+    function showError() {
+      divmessage.style.display = "none";
+      divcap.style.display = "block";
+    }
+    btn.addEventListener("click", showError);
+  </script>
+</html>
